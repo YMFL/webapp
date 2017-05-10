@@ -28,3 +28,4 @@ class RouterMap extends React.component {
         )
     }
 }
+export default RouterMap
