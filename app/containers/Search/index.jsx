@@ -5,9 +5,9 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
-class index extends React.component {
-    constructor(props, context) {
-        super(props, context);
+class index extends React.Component {
+    constructor() {
+        super();
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
 

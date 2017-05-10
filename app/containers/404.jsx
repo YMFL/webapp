@@ -5,9 +5,9 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
-class NotFound extends React.component {
-    constructor(props, context) {
-        super(props, context);
+class NotFound extends React.Component {
+    constructor() {
+        super();
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
 

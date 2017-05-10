@@ -3,14 +3,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom' ;
+import {hashHistory} from 'react-router'
+import RouteMap from './router/routeMap'
 
-class Hello extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1>hello world!</h1>
-            </div>
-        );
-    }
-}
-ReactDOM.render(<Hello/>, document.getElementById('root'))
+ReactDOM.render(<RouteMap history={hashHistory}/>,document.getElementById('root'))

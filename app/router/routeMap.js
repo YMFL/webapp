@@ -12,10 +12,10 @@ import Search from '../containers/Search'
 import Detail from '../containers/Detail'
 import NotFound from '../containers/404'
 
-class RouterMap extends React.component {
+class RouteMap extends React.Component {
     render() {
         return (
-            < Router history={this.props.history}>
+            <Router history={this.props.history}>
                 <Route path="/" component={App}>
                     <IndexRoute component={Home}/>
                     <Route path="/city" component={City}/>
@@ -28,4 +28,4 @@ class RouterMap extends React.component {
         )
     }
 }
-export default RouterMap
+export default RouteMap
