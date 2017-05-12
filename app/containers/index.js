@@ -6,6 +6,9 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import LocalStore from '../util/localStore'
 import {CITYNAME} from '../config/localStoreKey'
+import {bindActionCreators} from 'redux'
+import {connect} from 'react-redux'
+import * as userInfoActionsFormOtherFile from '../actions/userinfo'
 
 class App extends React.Component {
     constructor() {
@@ -21,11 +24,14 @@ class App extends React.Component {
         if(cityName==null){
             cityName="北京"
         }
+        this.props.userInfoActions.update({
+            cityName:cityName
+        })
         setTimeout(()=>{
             this.setState({
                 initDone:true
             })
-        },5000)
+        },2000)
     }
     render() {
         return (
@@ -35,4 +41,15 @@ class App extends React.Component {
         )
     }
 }
-export default App
+function mapStateToProps(state) {
+    return{}
+}
+function mapDispatchToProps(dispatch) {
+    return{
+        userInfoActions:bindActionCreators(userInfoActionsFormOtherFile,dispatch)
+    }
+}
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App)

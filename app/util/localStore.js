@@ -3,28 +3,25 @@
  */
 export default {
     getItem:function (key) {
-        let value;
-        // try{
+        try{
             //ios safari 无痕模式下，直接使用localStorage.setItem 会报错
-            return localStorage.getItem(key);
-        // }catch(ex) {
+             return localStorage.getItem(key);
+        }catch(ex) {
             //开发环境提示 error
             // if(__DEV__){
-            //     console.error('localStorage.getItem报错，',ex.message)
+                console.error('localStorage.getItem报错，',ex.message)
             // }
-        // }finally {
-        //     throw new Error;
-        // }
+        }
     },
     setItem:function (key,value) {
-        // try {
+        try {
             //ios safari 无痕模式下，直接使用localStorage.setItem 会报错
             localStorage.setItem(key,value)
-        // } catch (ex){
-        //     开发环境提示 error
-        //     if(__DEV__){
-        //         console.error('localStorage.getItem报错，',ex.message)
+        } catch (ex){
+            // 开发环境提示 error
+            // if(__DEV__){
+                console.error('localStorage.getItem报错，',ex.message)
             // }
-        // }
+        }
     }
 }

@@ -5,5 +5,15 @@ import React from 'react';
 import ReactDOM from 'react-dom' ;
 import {hashHistory} from 'react-router'
 import RouteMap from './router/routeMap'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
 
-ReactDOM.render(<RouteMap history={hashHistory}/>,document.getElementById('root'))
+//reducers 指明如何更新state
+import reducer from './reducers';
+const store = createStore(reducer);
+
+ReactDOM.render(
+    <Provider store={store}>
+        <RouteMap history={hashHistory}/>
+    </Provider>
+    ,document.getElementById('root'))
