@@ -14,10 +14,20 @@ class HomeHeader extends React.Component {
 
     render() {
         return (
-            <div className="clear-fix">
-                <div className="float-left">深圳</div>
-                <div className="float-right"><i className="icon-user"></i></div>
-                <div ><input type="text"/></div>
+            <div className="clear-fix HomeHeader">
+                <div className="home-header-left float-left">
+                    <span>深圳</span>&nbsp;
+                    <i className="icon-angle-down"></i>
+                </div>
+                <div className="home-header-right float-right">
+                    <i className="icon-user"></i>
+                </div>
+                <div className="home-header-middle">
+                    <div className="search-container">
+                        <i className="icon-search"></i>
+                        <input placeholder="请输入关键字" type="text"/>
+                    </div>
+                </div>
             </div>
         )
     }
