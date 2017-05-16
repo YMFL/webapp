@@ -7,7 +7,8 @@ import {hashHistory} from 'react-router'
 import RouteMap from './router/routeMap'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-
+import  'normalize.css'
+import './common/less/font.less'
 //reducers 指明如何更新state
 import reducer from './reducers';
 const store = createStore(reducer);

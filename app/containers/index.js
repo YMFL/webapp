@@ -31,7 +31,7 @@ class App extends React.Component {
             this.setState({
                 initDone:true
             })
-        },2000)
+        },100)
     }
     render() {
         return (

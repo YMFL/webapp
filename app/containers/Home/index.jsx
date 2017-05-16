@@ -4,6 +4,8 @@
 
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import HomeHeader from '../../components/HomeHeader'
+
 
 class index extends React.Component {
     constructor() {
@@ -13,7 +15,9 @@ class index extends React.Component {
 
     render() {
         return (
-            <div>Home</div>
+            <div>
+                <HomeHeader/>
+            </div>
         )
     }
 }
