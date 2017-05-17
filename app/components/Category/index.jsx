@@ -16,9 +16,10 @@ class Category extends React.Component {
     }
 
     render() {
+
         return (
             <div>
-                <AutoPlaySwipeableViews>
+                <AutoPlaySwipeableViews >
                     <div >
                         slide n°1
                     </div>
