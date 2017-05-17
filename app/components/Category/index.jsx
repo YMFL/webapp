@@ -6,8 +6,8 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import './style.less'
 import SwipeableViews from 'react-swipeable-views'
-import {autoPlay} from 'react-swipeable-views-utils'
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+import {autoPlay,bindKeyboard} from 'react-swipeable-views-utils'
+const AutoPlaySwipeableViews = autoPlay(bindKeyboard(SwipeableViews));
 
 class Category extends React.Component {
     constructor() {
