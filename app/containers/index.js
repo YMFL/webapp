@@ -31,12 +31,12 @@ class App extends React.Component {
             this.setState({
                 initDone:true
             })
-        },100)
+        },1000)
     }
     render() {
         return (
             <div>
-                {this.state.initDone?this.props.children:<div>记载中。。。</div>}
+                {this.state.initDone?this.props.children:<div>加载中。。。</div>}
             </div>
         )
     }

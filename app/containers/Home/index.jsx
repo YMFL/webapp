@@ -4,10 +4,11 @@
 
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import {connect} from 'react-redux'
 import HomeHeader from '../../components/HomeHeader'
 
 
-class index extends React.Component {
+class Home extends React.Component {
     constructor() {
         super();
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
@@ -16,9 +17,20 @@ class index extends React.Component {
     render() {
         return (
             <div>
-                <HomeHeader/>
+                <HomeHeader cityName={this.props.userinfo.cityName}/>
             </div>
         )
     }
 }
-export default index
+function mapStateToProps(state) {
+    return{
+        userinfo:state.userinfo
+    }
+}
+function mapDispatchToProps(dispatch) {
+    return{}
+}
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Home)
